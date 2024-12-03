@@ -20,7 +20,7 @@ For example,if you download it in "D:\",you should change like this:
             "type": "chrome",
             "request": "launch",
             "name": "Open regist.html",
-            "file": "D:\\HuaWeiRepositories\\regist.html"
+            "file": "D:\\HuaWeiProject-main\\regist.html"
         }
     ]
 }
