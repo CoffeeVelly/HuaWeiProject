@@ -20,3 +20,5 @@ npm-debug.log       # npm 错误日志
 
 *.db
 *.sqlite
+
+.vscode/launch.json
