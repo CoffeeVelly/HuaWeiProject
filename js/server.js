@@ -1,9 +1,9 @@
 const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
-const { registerUser } = require('./database');
 const bcrypt = require('bcryptjs');
-const { getUserByUsername } = require('./database'); // 新增的数据库查询函数
+const { registerUser } = require('./database');
+const { getUserByUsername } = require('./database');
 
 const app = express();
 const port = 3000;
