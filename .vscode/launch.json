@@ -5,7 +5,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open regist.html",
-            "file": "C:\\Users\\VellyKieyOriginal\\Desktop\\o.0？\\HuaWeiRepositories\\regist.html"
+            "file": "C:\\path\\to\\your\\folder\\HuaWeiProject-main\\regist.html"
         }
     ]
 }
