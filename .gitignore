@@ -1,25 +1,22 @@
-# 忽略操作系统生成的文件
 .DS_Store           # macOS 操作系统
 Thumbs.db           # Windows 操作系统
 
-# 忽略 Node.js 生成的文件
 node_modules/       # Node.js 依赖文件夹
 npm-debug.log       # npm 错误日志
 
-# 忽略构建输出
 /dist/              # 构建输出目录
 /build/             # 构建输出目录
 
-# 忽略 IDE 或编辑器生成的文件
 .vscode/            # Visual Studio Code 设置文件夹
 .idea/              # JetBrains 系列 IDE 设置文件夹
 *.swp               # Vim 临时文件
 *.sublime-workspace # Sublime Text 工作区文件
 *.sublime-project   # Sublime Text 项目文件
 
-# 忽略日志文件
 *.log
 
-# 忽略个人配置文件
 .env                # 环境变量文件
 *.env               # 环境文件
+
+*.db
+*.sqlite
