@@ -51,7 +51,6 @@ nextButton.addEventListener('click', function() {
     }
 });
 
-// 自动轮播（可选）
 setInterval(function() {
     nextButton.click();
 }, 5000);  // 每5秒自动切换到下一张图片
