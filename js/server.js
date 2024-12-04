@@ -17,13 +17,13 @@ app.listen(port, () => {
 
 // 注册 API
 app.post('/register', (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, age } = req.body;
 
     if (!username || !password) {
         return res.status(400).json({ error: 'Username and password are required' });
     }
 
-    registerUser(username, password, (err, userId) => {
+    registerUser(username, password, age, (err, userId) => {
         if (err) {
             return res.status(500).json({ error: 'Failed to register user' });
         }
