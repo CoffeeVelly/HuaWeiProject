@@ -6,18 +6,18 @@ const db = new sqlite3.Database('./users.db');
 
 // 创建 users 表
 db.serialize(() => {
-    db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, age INTEGER)");
+    db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)");
 });
 
 // 注册新用户
-const registerUser = (username, password, age, callback) => {
+const registerUser = (username, password, callback) => {
     // 加密密码
     bcrypt.hash(password, 10, (err, hashedPassword) => {
         if (err) {
             return callback(err);
         }
-        const stmt = db.prepare("INSERT INTO users (username, password, age) VALUES (?, ?, ?)");
-        stmt.run(username, hashedPassword, age, function (err) {
+        const stmt = db.prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        stmt.run(username, hashedPassword, function (err) {
             if (err) {
                 return callback(err);
             }

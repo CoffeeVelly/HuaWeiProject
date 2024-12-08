@@ -26,7 +26,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     const username = document.getElementById('registerUsername').value;  // 使用正确的 ID
     const password = document.getElementById('registerPassword').value;  // 使用正确的 ID
-    const age = document.getElementById('age').value;
 
     // 发送 POST 请求到后端 API
     fetch('http://localhost:3000/register', {
@@ -34,7 +33,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password, age })
+        body: JSON.stringify({ username, password })
     })
     .then(response => response.json())
     .then(data => {
